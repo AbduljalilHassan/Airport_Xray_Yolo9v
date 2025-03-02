@@ -6,9 +6,6 @@ This project leverages the YOLOv9 model for detecting objects in airport X-ray i
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Dataset](#dataset)
-- [Usage](#usage)
-- [Results](#results)
 - [References](#references)
 
 ## Introduction
@@ -36,40 +33,7 @@ pip install -r requirements.txt
 pip install roboflow
 ```
 
-## Dataset
-
-The dataset is sourced from [Roboflow Universe](https://universe.roboflow.com/). Download the dataset using:
-
-```sh
-python download_dataset.py
-```
-
-## Usage
-
-### Training
-
-```sh
-python train.py --data xray.yaml --weights yolov9-e.pt --epochs 50
-```
-
-### Inference
-
-```sh
-python detect.py --source test.jpg --weights runs/train/exp/weights/best.pt
-```
-
-### Evaluation
-
-```sh
-python val.py --data xray.yaml --weights runs/train/exp/weights/best.pt
-```
-
-## Results
-
-Inference results are saved in `runs/detect/` as `exp`, `exp2`, etc. Specify a custom name using `--name`.
-
 ## References
 
 - [YOLOv9 GitHub Repository](https://github.com/WongKinYiu/yolov9)
 - [Roboflow Universe](https://universe.roboflow.com/)
-
